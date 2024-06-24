@@ -18,6 +18,7 @@ public class BoardDao {
 
 	DataSource dataSource;
 	JdbcTemplate template;
+	
 	public BoardDao() {		
 		this.template = Constant.template;		
 	}
@@ -28,7 +29,7 @@ public class BoardDao {
 			
 			@Override
 			public PreparedStatement createPreparedStatement(Connection con) throws SQLException {
-				String sql = "INSERT INTO springboard(bnum,btitle, bcontent, bhit) VALUES(?,?,?,0)";
+				String sql = "INSERT INTO springboard(bname,btitle, bcontent, bhit) VALUES(?,?,?,0)";
 				
 				PreparedStatement pstmt = con.prepareStatement(sql);
 				
@@ -36,7 +37,7 @@ public class BoardDao {
 				pstmt.setString(2, btitle);
 				pstmt.setString(3, bcontent);
 				
-				return null;
+				return pstmt;
 			}
 		});	
 	}

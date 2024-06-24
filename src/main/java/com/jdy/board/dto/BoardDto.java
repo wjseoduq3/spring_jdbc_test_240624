@@ -6,7 +6,7 @@ public class BoardDto {
 	private String bname;
 	private String btitle;
 	private String bcontent;
-	private String bhit;
+	private int bhit;
 	private String bdate;
 	
 	public BoardDto() {
@@ -14,7 +14,7 @@ public class BoardDto {
 		// TODO Auto-generated constructor stub
 	}
 
-	public BoardDto(int bnum, String bname, String btitle, String bcontent, String bhit, String bdate) {
+	public BoardDto(int bnum, String bname, String btitle, String bcontent, int bhit, String bdate) {
 		super();
 		this.bnum = bnum;
 		this.bname = bname;
@@ -56,11 +56,11 @@ public class BoardDto {
 		this.bcontent = bcontent;
 	}
 
-	public String getBhit() {
+	public int getBhit() {
 		return bhit;
 	}
 
-	public void setBhit(String bhit) {
+	public void setBhit(int bhit) {
 		this.bhit = bhit;
 	}
 

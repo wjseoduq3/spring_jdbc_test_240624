@@ -1,7 +1,5 @@
 package com.jdy.board.controller;
 
-import java.rmi.activation.ActivationGroupDesc.CommandEnvironment;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,10 +25,9 @@ public class BoardController {
 		this.template = template;
 		Constant.template = this.template;
 	}
-
+	
 	@RequestMapping(value = "/write")
 	public String write() {
-		
 		
 		return "write_form";	
 	}
