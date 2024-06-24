@@ -16,7 +16,7 @@ import com.jdy.board.dto.BoardDto;
 import com.jdy.board.util.Constant;
 
 public class BoardDao {
-
+	// 멤버변수(멤버객체)
 	DataSource dataSource;
 	JdbcTemplate template;
 	
@@ -30,7 +30,8 @@ public class BoardDao {
 			
 			@Override
 			public PreparedStatement createPreparedStatement(Connection con) throws SQLException {
-				String sql = "INSERT INTO springboard(bname,btitle, bcontent, bhit) VALUES(?,?,?,0)";
+				
+				String sql = "INSERT INTO springboard(bname, btitle, bcontent, bhit) VALUES(?,?,?,0)";
 				
 				PreparedStatement pstmt = con.prepareStatement(sql);
 				
@@ -44,6 +45,7 @@ public class BoardDao {
 	}
 	
 	public ArrayList<BoardDto> list() {
+		
 		String sql = "SELECT * FROM springboard ORDER BY bnum DESC";
 		
 		ArrayList<BoardDto> boardDtos = (ArrayList<BoardDto>) this.template.query(sql, new BeanPropertyRowMapper(BoardDto.class));
@@ -76,6 +78,7 @@ public class BoardDao {
 	}
 
 	public void  delete()	{
+		
 //		String sql ="DELETE FROM springboard WHERE bnum=?";
 //		
 //		this.template.delete(sql, new PreparedStatementSetter() {

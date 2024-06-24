@@ -35,9 +35,9 @@ public class BoardController {
 	
 	@RequestMapping(value = "/writeOk")
 	public String write(HttpServletRequest request, Model model) {
-		
+		// model에 request 싣기
 		model.addAttribute("request", request);
-		
+		// command 호출
 		command = new BWriteCommand();
 		command.execute(model);
 		

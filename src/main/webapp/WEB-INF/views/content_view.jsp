@@ -9,7 +9,7 @@
 <body>
 	<h3>글 내용 보기</h3>
 	<hr>
-	<table border="1" cellspacing="0" cellpadding="0" width="800">
+	<table border="1" cellspacing="0" cellpadding="0" width="600">
 		<tr>
 			<td width="100">글번호</td>
 			<td>${boardDto.bnum}</td>

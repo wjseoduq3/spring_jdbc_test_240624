@@ -21,7 +21,7 @@
 			</tr>
 			<tr>
 				<td>내용</td>
-				<td><textarea rows="10" cols="45" name="bcontent"></textarea>
+				<td><textarea rows="15" cols="45" name="bcontent"></textarea></td>
 			</tr>
 			<tr>
 				<td colspan="2">
@@ -29,11 +29,7 @@
 					<input type="button" value="글목록" onclick="javascript:window.location.href='list'">
 				</td>				
 			</tr>
-		</table>
-	
-	
-	
-	</form>
-	
+		</table>	
+	</form>	
 </body>
 </html>

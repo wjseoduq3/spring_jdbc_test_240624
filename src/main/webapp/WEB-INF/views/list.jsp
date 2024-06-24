@@ -12,11 +12,11 @@
 	<hr>
 	<table border="1" cellspacing="0" cellpadding="0" width="800">
 		<tr>
-			<td>번호</td>
-			<td width="400">제목</td>
-			<td>작성자</td>
-			<td>등록일</td>
-			<td>조회수</td>
+			<th>번호</th>
+			<th width="400">제목</th>
+			<th>작성자</th>
+			<th>등록일</th>
+			<th>조회수</th>
 		</tr>
 		<c:forEach items="${boardList}" var="bDto">
 		<tr>
@@ -30,6 +30,5 @@
 		</tr>
 		</c:forEach>
 	</table>	
-
 </body>
 </html>

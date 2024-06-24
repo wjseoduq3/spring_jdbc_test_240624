@@ -11,13 +11,10 @@ public class BListCommand implements BCommand {
 
 	@Override
 	public void execute(Model model) {
-		// TODO Auto-generated method stub
+		
 		BoardDao boardDao = new BoardDao();
 		ArrayList<BoardDto> boardDtos = boardDao.list();
 		
-		model.addAttribute("boardList", boardDtos);
-			
+		model.addAttribute("boardList", boardDtos);			
 	}
-
 }
-;

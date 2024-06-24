@@ -9,7 +9,7 @@ import org.springframework.ui.Model;
 import com.jdy.board.dao.BoardDao;
 import com.jdy.board.dto.BoardDto;
 
-public class BContentViewCommand implements BCommand{
+public class BContentViewCommand implements BCommand {
 	
 	public void execute(Model model) {
 		Map<String, Object> map = model.asMap();
@@ -20,9 +20,6 @@ public class BContentViewCommand implements BCommand{
 		BoardDao boardDao = new BoardDao();
 		BoardDto boardDto = boardDao.content_view(bnum);
 		
-		model.addAttribute("boardDto", boardDto);
-		
-	}
-	
-	
+		model.addAttribute("boardDto", boardDto);		
+	}	
 }
