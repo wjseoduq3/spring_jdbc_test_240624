@@ -21,12 +21,12 @@
 			</tr>
 			<tr>
 				<td>내용</td>
-				<td><textarea rows="10" cols="45" name=bcontent"></textarea>
+				<td><textarea rows="10" cols="45" name="bcontent"></textarea>
 			</tr>
 			<tr>
 				<td colspan="2">
 					<input type="submit" value="글입력">
-					<input type="button" value="글목록">
+					<input type="button" value="글목록" onclick="javascript:window.location.href='list'">
 				</td>				
 			</tr>
 		</table>

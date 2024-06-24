@@ -10,6 +10,7 @@ import javax.sql.DataSource;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.core.PreparedStatementSetter;
 
 import com.jdy.board.dto.BoardDto;
 import com.jdy.board.util.Constant;
@@ -57,6 +58,22 @@ public class BoardDao {
 		BoardDto boardDto = this.template.queryForObject(sql, new BeanPropertyRowMapper(BoardDto.class));
 		
 		return boardDto;	
+	}
+	
+	public void modify(final String bnum, final String btitle, final String bcontent) {
+		
+		String sql ="UPDATE springboard SET btitle=?, bcontent=? WHERE bnum=?";
+		
+		this.template.update(sql, new PreparedStatementSetter() {
+			
+			@Override
+			public void setValues(PreparedStatement ps) throws SQLException {
+				ps.setString(1, btitle);
+				ps.setString(2, bcontent);
+				ps.setString(3, bnum);				
+			}			
+		});
+
 	}
 	
  	
