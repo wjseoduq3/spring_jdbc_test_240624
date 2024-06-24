@@ -73,11 +73,25 @@ public class BoardDao {
 				ps.setString(3, bnum);				
 			}			
 		});
-
 	}
+
+	public void  delete()	{
+//		String sql ="DELETE FROM springboard WHERE bnum=?";
+//		
+//		this.template.delete(sql, new PreparedStatementSetter() {
+//			
+//			@Override
+//			public void setValues(PreparedStatement ps) throws SQLException {
+//				ps.setString(1, btitle);
+//				ps.setString(2, bcontent);
+//				ps.setString(1, bname);
+//				ps.setString(2, bhit);
+//				ps.setString(3, bnum);				
+//			}			
+//		});
+		
+	}
+		
 	
  	
-	
-	
-	
 }

@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.ui.Model;
 
 import com.jdy.board.dao.BoardDao;
-import com.jdy.board.dto.BoardDto;
 
 public class BModifyCommand implements BCommand {
 

@@ -11,7 +11,7 @@
 	<hr>
 	<form action="modifyOk">
 	<input type="hidden" name="bnum" value="${boardDto.bnum}">
-	<table border="1" cellspacing="0" cellpadding="0" width="800">
+	<table border="1" cellspacing="0" cellpadding="0" width="600">
 		<tr>
 			<td width="100">글번호</td>
 			<td>${boardDto.bnum}</td>
@@ -26,7 +26,7 @@
 		</tr>
 		<tr>
 			<td>글제목</td>
-			<td><input type="text" name="btitle" value="${boardDto.btitle}"></td>
+			<td><input type="text" name="btitle" value="${boardDto.btitle}" size="60"></td>
 		</tr>
 		<tr>
 			<td height="200" valign="top">글내용</td>
@@ -42,13 +42,6 @@
 			<td colspan="2">
 				<input type="submit" value="완료">
 				<input type="button" value="취소" onclick="javascript:history.go(-1)">
-		</tr>
-		<tr>
-			<td colspan="2">
-				<input type="button" value="수정" onclick="javascript:window.location.href='modify?bnum=${boardDto.bnum}'">
-				<input type="button" value="삭제">
-				<input type="button" value="목록" onclick="javascript:window.location.href='list'">
-			</td>
 		</tr>		
 	</table>
 	</form>	
