@@ -27,8 +27,7 @@
 				<td colspan="2">
 					<input type="submit" value="글입력">
 					<input type="button" value="글목록">
-				</td>
-				
+				</td>				
 			</tr>
 		</table>
 	
