@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.jdy.board.command.BCommand;
+import com.jdy.board.command.BListCommand;
 import com.jdy.board.command.BWriteCommand;
 import com.jdy.board.util.Constant;
 
@@ -41,7 +42,16 @@ public class BoardController {
 		command = new BWriteCommand();
 		command.execute(model);
 		
-		return "write_form";	
+		return "redirect:list";	
+	}
+	
+	@RequestMapping(value = "/list")
+	public String list(Model model) {
+		
+		command = new BListCommand();
+		command.execute(model);
+		
+		return "list";		
 	}
 		
 }

@@ -3,12 +3,15 @@ package com.jdy.board.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.sql.DataSource;
 
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 
+import com.jdy.board.dto.BoardDto;
 import com.jdy.board.util.Constant;
 
 public class BoardDao {
@@ -35,10 +38,19 @@ public class BoardDao {
 				
 				return null;
 			}
-		});
-		
+		});	
 	}
 	
+	public ArrayList<BoardDto> list() {
+		String sql = "SELECT * FROM springboard ORDER BY bnum DESC";
+		
+		ArrayList<BoardDto> boardDtos = (ArrayList<BoardDto>) this.template.query(sql, new BeanPropertyRowMapper(BoardDto.class));
+		
+		return boardDtos;	
+	}
+	
+	
+ 	
 	
 	
 	
